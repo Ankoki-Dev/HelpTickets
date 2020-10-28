@@ -1,0 +1,14 @@
+name: HelpTickets
+author: Ankoki
+version: 1.0
+main: com.Ankoki.helptickets.main.HelpTickets
+prefix: "HT"
+commands:
+  helptickets:
+    usage: /ht
+    description: This is used to create and revoke tickets. Also used to open staff GUI.
+    aliases:
+      - ht
+      - hts
+      - ticket
+      - tickets
