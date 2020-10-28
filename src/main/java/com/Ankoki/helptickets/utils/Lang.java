@@ -20,7 +20,6 @@ public class Lang {
     public static String CMD_CLEAR_MESSAGE;
     public static String CMD_NOPERM_MESSAGE;
     public static String CMD_INVALID_USAGE_MESSAGE;
-    public static String CMD_INVALID_USAGE_MESSAGE_ADMIN;
     public static List<String> CMD_HELP_MESSAGE = new ArrayList<String>();
 
     HelpTickets plugin;
@@ -79,7 +78,6 @@ public class Lang {
         CMD_CLEAR_MESSAGE = Utils.cC(lang.getString("cmd_clear_message"));
         CMD_NOPERM_MESSAGE = Utils.cC(lang.getString("cmd_noperm_message"));
         CMD_INVALID_USAGE_MESSAGE = Utils.cC(lang.getString("cmd_invalid_usage_message"));
-        CMD_INVALID_USAGE_MESSAGE_ADMIN = Utils.cC(lang.getString("cmd_invalid_usage_message_staff"));
         CMD_HELP_MESSAGE = lang.getStringList("cmd_help_message");
     }
 }
