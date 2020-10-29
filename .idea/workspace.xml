@@ -19,7 +19,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bb83f25-ae75-4a36-be58-612ef4440892" name="Default Changelist" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/inventories/TicketInventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/listeners/InventoryClickE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/main/HelpTickets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/main/HelpTickets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Lang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Lang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lang.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/HelpTickets-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/HelpTickets-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/commands/TicketCMD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/commands/TicketCMD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/main/HelpTickets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/main/HelpTickets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/utils/Err.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/utils/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/utils/Ticket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,21 +56,24 @@
     </option>
   </component>
   <component name="ProjectId" id="1jQXG0ZgkushKX46T58KJ1S6g8V" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.14257812" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="discord-application" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -83,6 +98,11 @@
       <workItem from="1603907030988" duration="94000" />
       <workItem from="1603907187639" duration="1563000" />
       <workItem from="1603908778120" duration="2602000" />
+      <workItem from="1603908208832" duration="3573000" />
+      <workItem from="1603907675978" duration="668000" />
+      <workItem from="1603907980299" duration="668000" />
+      <workItem from="1603995071447" duration="55000" />
+      <workItem from="1603995150365" duration="2866000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1603908946520</created>
@@ -91,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603908946520</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial Commit">
+      <created>1603908374041</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603908374041</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +134,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
@@ -114,10 +142,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1280" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1603846074587">
+    <state x="-1280" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1603995072037">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1280" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603846074587" />
+    <state x="-1280" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603995072037" />
     <state x="-1286" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1603908092946">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -130,38 +158,42 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603907849581" />
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1603856818644">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1603908750623">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603856818644" />
-    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1603856818644">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603908750623" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1603908750622">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603856818644" />
-    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1603856818644">
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603908750622" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1603908750622">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603856818644" />
-    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1603856818644">
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603908750622" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1603908750623">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603856818644" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603908750623" />
     <state x="-1380" y="255" key="IDE.errors.dialog" timestamp="1603748576874">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1380" y="255" key="IDE.errors.dialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603748576874" />
-    <state x="-1582" y="150" key="SettingsEditor" timestamp="1603908075774">
+    <state x="-1582" y="150" key="SettingsEditor" timestamp="1603995692139">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1582" y="150" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603908075774" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603905736253">
+    <state x="-1582" y="150" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603995692139" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603908472650">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603905736253" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603908472650" />
     <state x="-1828" y="92" width="1736" height="856" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603908043024">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1828" y="92" width="1736" height="856" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603908043024" />
+    <state x="-1159" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1603908312444">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1159" y="426" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603908312444" />
     <state x="-1304" y="240" key="run.anything.popup" timestamp="1603851709599">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>

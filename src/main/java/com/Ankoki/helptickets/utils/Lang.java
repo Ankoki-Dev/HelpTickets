@@ -12,14 +12,16 @@ import java.util.List;
 
 public class Lang {
 
-    //ty steel for letting me yoink codes from BN<333
+    //ty steel for letting me yoink codes from BN<333 and shane for writing the base of that<333
 
     public static String PREFIX;
     public static String CMD_CREATE_MESSAGE;
     public static String CMD_REVOKE_MESSAGE;
     public static String CMD_CLEAR_MESSAGE;
+    public static String CMD_NOTICKETS_MESSAGE;
     public static String CMD_NOPERM_MESSAGE;
     public static String CMD_INVALID_USAGE_MESSAGE;
+    public static String CMD_INVALID_USAGE_MESSAGE_ADMIN;
     public static List<String> CMD_HELP_MESSAGE = new ArrayList<String>();
 
     HelpTickets plugin;
@@ -72,12 +74,14 @@ public class Lang {
     }
 
     private void loadFile() {
-        PREFIX = lang.getString("prefix");
-        CMD_CREATE_MESSAGE = Utils.cC(lang.getString("cmd_create_message"));
-        CMD_REVOKE_MESSAGE = Utils.cC(lang.getString("cmd_revoke_message"));
-        CMD_CLEAR_MESSAGE = Utils.cC(lang.getString("cmd_clear_message"));
-        CMD_NOPERM_MESSAGE = Utils.cC(lang.getString("cmd_noperm_message"));
-        CMD_INVALID_USAGE_MESSAGE = Utils.cC(lang.getString("cmd_invalid_usage_message"));
+        PREFIX = lang.getString("PREFIX");
+        CMD_CREATE_MESSAGE = Utils.cC(lang.getString("CMD_CREATE_MESSAGE"));
+        CMD_REVOKE_MESSAGE = Utils.cC(lang.getString("CMD_REVOKE_MESSAGE"));
+        CMD_CLEAR_MESSAGE = Utils.cC(lang.getString("CMD_CLEAR_MESSAGE"));
+        CMD_NOPERM_MESSAGE = Utils.cC(lang.getString("CMD_NOPERM_MESSAGE"));
+        CMD_NOTICKETS_MESSAGE = Utils.cC(lang.getString("CMD_NOTICKETS_MESSAGE"));
+        CMD_INVALID_USAGE_MESSAGE = Utils.cC(lang.getString("CMD_INVALID_USAGE_MESSAGE"));
+        CMD_INVALID_USAGE_MESSAGE_ADMIN = Utils.cC(lang.getString("CMD_INVALID_USAGE_MESSAGE_ADMIN"));
         CMD_HELP_MESSAGE = lang.getStringList("cmd_help_message");
     }
 }

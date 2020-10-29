@@ -1,6 +1,7 @@
 package com.Ankoki.helptickets.main;
 
 import com.Ankoki.helptickets.commands.TicketCMD;
+import com.Ankoki.helptickets.listeners.InventoryClickE;
 import com.Ankoki.helptickets.utils.Lang;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -13,6 +14,7 @@ public class HelpTickets extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        System.out.println(this.getServer().getBukkitVersion());
         plugin = this;
         System.out.println("[HT] Fetching commands...");
         commands();
@@ -30,7 +32,7 @@ public class HelpTickets extends JavaPlugin {
 
     //STFU I HAVENT DONE THIS YET
     private void listeners() {
-
+        this.getServer().getPluginManager().registerEvents(new InventoryClickE(), this);
     }
 
     private void commands() {
@@ -39,5 +41,10 @@ public class HelpTickets extends JavaPlugin {
 
     public static HelpTickets plugin() {
         return plugin;
+    }
+
+    public int serverVersion() {
+        String[] serv = this.getServer().getBukkitVersion().split(".");
+        return Integer.parseInt(serv[1]);
     }
 }

@@ -1,5 +1,7 @@
-com\Ankoki\helptickets\utils\Ticket.class
-com\Ankoki\helptickets\utils\Err.class
+com\Ankoki\helptickets\utils\Lang.class
+com\Ankoki\helptickets\inventories\TicketInventory.class
 com\Ankoki\helptickets\utils\Utils.class
 com\Ankoki\helptickets\commands\TicketCMD.class
+com\Ankoki\helptickets\utils\Ticket.class
+com\Ankoki\helptickets\listeners\InventoryClickE.class
 com\Ankoki\helptickets\main\HelpTickets.class
