@@ -5,3 +5,4 @@ com\Ankoki\helptickets\commands\TicketCMD.class
 com\Ankoki\helptickets\utils\Ticket.class
 com\Ankoki\helptickets\listeners\InventoryClickE.class
 com\Ankoki\helptickets\main\HelpTickets.class
+com\Ankoki\helptickets\main\HelpTickets$Version.class

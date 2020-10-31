@@ -1,5 +1,6 @@
 name: HelpTickets
 author: Ankoki
+description: A plugin used to manage reports on your server.
 version: 1.0
 main: com.Ankoki.helptickets.main.HelpTickets
 prefix: "HT"

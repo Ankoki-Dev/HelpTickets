@@ -3,7 +3,9 @@ package com.Ankoki.helptickets.main;
 import com.Ankoki.helptickets.commands.TicketCMD;
 import com.Ankoki.helptickets.listeners.InventoryClickE;
 import com.Ankoki.helptickets.utils.Lang;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+
 
 @SuppressWarnings({"unused", "redundant"})
 public class HelpTickets extends JavaPlugin {
@@ -14,7 +16,6 @@ public class HelpTickets extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        System.out.println(this.getServer().getBukkitVersion());
         plugin = this;
         System.out.println("[HT] Fetching commands...");
         commands();
@@ -30,7 +31,6 @@ public class HelpTickets extends JavaPlugin {
         plugin = null;
     }
 
-    //STFU I HAVENT DONE THIS YET
     private void listeners() {
         this.getServer().getPluginManager().registerEvents(new InventoryClickE(), this);
     }
@@ -43,8 +43,24 @@ public class HelpTickets extends JavaPlugin {
         return plugin;
     }
 
-    public int serverVersion() {
-        String[] serv = this.getServer().getBukkitVersion().split(".");
-        return Integer.parseInt(serv[1]);
+    public enum Version {
+        v1_8_R1,
+        v1_9_R1,
+        v1_10_R1,
+        v1_11_R1,
+        v1_12_R1,
+        v1_12_R2,
+        v1_13_R1,
+        v1_14_R1,
+        v1_15_R1,
+        v1_16_R1,
+        v1_16_R2,
+    }
+
+    public int getVersion() {
+        String packageName = Bukkit.getServer().getClass().getPackage().getName();
+        String version = packageName.substring(packageName.lastIndexOf('.') + 1);
+        String[] str = Version.valueOf(version).toString().split("_");
+        return Integer.parseInt(str[1]);
     }
 }

@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Lang {
 
-    //ty steel for letting me yoink codes from BN<333 and shane for writing the base of that<333
+    //ty steel for letting me yoink codes from BN<3333 and shane for writing the base of that<3333
 
     public static String PREFIX;
     public static String CMD_CREATE_MESSAGE;

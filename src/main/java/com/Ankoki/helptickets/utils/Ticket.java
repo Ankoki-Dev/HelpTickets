@@ -8,11 +8,13 @@ public class Ticket {
     String reporterName;
     String[] helpReason;
     boolean ticketSolved;
+    Priority ticketPriority;
 
     public Ticket(String playerName, String[] reasonOfReport, boolean ifTicketSolved) {
         this.reporterName = playerName;
         this.helpReason = reasonOfReport;
         this.ticketSolved = ifTicketSolved;
+        this.ticketPriority = Priority.UNDETERMINED;
     }
 
     public String getName() {
@@ -51,5 +53,13 @@ public class Ticket {
 
     public Player getReporter() {
         return Bukkit.getPlayer(reporterName);
+    }
+
+    public void setPriority(Priority priority) {
+        ticketPriority = priority;
+    }
+
+    public Priority getPriority() {
+        return ticketPriority;
     }
 }

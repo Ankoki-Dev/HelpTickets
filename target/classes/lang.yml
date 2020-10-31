@@ -1,12 +1,11 @@
 PREFIX: '&8[&2H&aT&8]'
 #These have prefixes before the message.
-#slutmobile: split all these at \n and loop at and send each line seperately sunshine
-CMD_CREATE_MESSAGE: '&aYou have created a ticket! Staff will review this soon!\n&8[&2H&aT&8] &aTo &crevoke &athis ticket, use /ht revoke'
+CMD_CREATE_MESSAGE: '&aYou have created a ticket! Staff will review this soon!'
 CMD_REVOKE_MESSAGE: '&aYou have revoked your ticket!'
 CMD_CLEAR_MESSAGE: '&cYou have cleared all open tickets!'
 CMD_NOPERM_MESSAGE: '&cInvalid Permission'
 CMD_NOTICKET_MESSAGE: '&aYou need a ticket to revoke it!'
-CMD_NOTICKETS_MESSAGE: '&cThere are no tickets! Wait until someone makes one.'
+CMD_NOTICKETS_MESSAGE: '&cThere are no tickets, or more than 54. Use /tickets open text to find out.'
 #Here you can use %u, which will be replaced with the proper usage.
 CMD_INVALID_USAGE_MESSAGE: '&cInvalid Usage. Proper usage: /%u'
 CMD_INVALID_USAGE_MESSAGE_ADMIN: '&cInvalid Usage. Proper usage: /%u'
