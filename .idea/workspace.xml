@@ -18,23 +18,23 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bb83f25-ae75-4a36-be58-612ef4440892" name="Default Changelist" comment="Added stuffz">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Priority.java" afterDir="false" />
+    <list default="true" id="9bb83f25-ae75-4a36-be58-612ef4440892" name="Default Changelist" comment="Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/commands/TicketCMD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/commands/TicketCMD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/inventories/TicketInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/inventories/TicketInventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/listeners/InventoryClickE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/listeners/InventoryClickE.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/main/HelpTickets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/main/HelpTickets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Lang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Lang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Ticket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lang.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/HelpTickets-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/HelpTickets-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/commands/TicketCMD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/commands/TicketCMD.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/inventories/TicketInventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/inventories/TicketInventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/listeners/InventoryClickE.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/listeners/InventoryClickE.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/main/HelpTickets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/main/HelpTickets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lang.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/utils/Lang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/utils/Lang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/utils/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/utils/Ticket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/utils/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,6 +110,9 @@
       <workItem from="1604104828981" duration="5791000" />
       <workItem from="1604149234500" duration="2253000" />
       <workItem from="1604151947234" duration="3206000" />
+      <workItem from="1604162258777" duration="207000" />
+      <workItem from="1604244173310" duration="1993000" />
+      <workItem from="1604268963518" duration="4100000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1603908946520</created>
@@ -132,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604005728547</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit">
+      <created>1604162381868</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604162381868</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +164,8 @@
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Added stuffz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added stuffz" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1280" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1603995072037">
@@ -173,22 +184,22 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603907849581" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1604109412453">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1604271265352">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604109412453" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1604109412453">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604271265352" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1604271265352">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604109412453" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1604109412453">
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604271265352" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1604271265352">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604109412453" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1604109412453">
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604271265352" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1604271265352">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604109412453" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604271265352" />
     <state x="-1380" y="255" key="IDE.errors.dialog" timestamp="1603748576874">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -197,18 +208,26 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1582" y="150" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603995692139" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604005731989">
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604162403569">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604005731989" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604162403569" />
     <state x="-1828" y="92" width="1736" height="856" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603908043024">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1828" y="92" width="1736" height="856" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603908043024" />
+    <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604162314566">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604162314566" />
     <state x="-1159" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1603908312444">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1159" y="426" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603908312444" />
+    <state x="-1369" y="181" key="new project wizard" timestamp="1604270722871">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1369" y="181" key="new project wizard/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604270722871" />
     <state x="-1260" y="265" key="refactoring.ChangeSignatureDialog" timestamp="1604109384389">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>

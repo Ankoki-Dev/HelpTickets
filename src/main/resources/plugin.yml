@@ -4,6 +4,7 @@ description: A plugin used to manage reports on your server.
 version: 1.0
 main: com.Ankoki.helptickets.main.HelpTickets
 prefix: "HT"
+api-version: 1.16
 commands:
   helptickets:
     usage: /ht

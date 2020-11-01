@@ -67,8 +67,9 @@ public class TicketCMD implements CommandExecutor {
             if (p.hasPermission("helptickets.open") || p.hasPermission("helptickets.*") || p.hasPermission("helptickets.admin")) {
                 ti.openInventory(p);
             }
+            return true;
         }
-        p.sendMessage(Lang.CMD_INVALID_USAGE_MESSAGE.replace("%u", "/tickets (open|revoke) [reason]"));
+        p.sendMessage(Lang.CMD_INVALID_USAGE_MESSAGE.replace("%u", "tickets (open|revoke) [reason]"));
         return true;
     }
 }

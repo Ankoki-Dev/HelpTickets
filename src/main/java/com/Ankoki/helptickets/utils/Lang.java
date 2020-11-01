@@ -74,7 +74,7 @@ public class Lang {
     }
 
     private void loadFile() {
-        PREFIX = lang.getString("PREFIX");
+        PREFIX = Utils.cC(lang.getString("PREFIX"));
         CMD_CREATE_MESSAGE = Utils.cC(lang.getString("CMD_CREATE_MESSAGE"));
         CMD_REVOKE_MESSAGE = Utils.cC(lang.getString("CMD_REVOKE_MESSAGE"));
         CMD_CLEAR_MESSAGE = Utils.cC(lang.getString("CMD_CLEAR_MESSAGE"));

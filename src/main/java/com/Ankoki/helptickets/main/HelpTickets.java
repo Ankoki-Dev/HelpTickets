@@ -17,6 +17,20 @@ public class HelpTickets extends JavaPlugin {
     @Override
     public void onEnable() {
         plugin = this;
+        System.out.println("[HT] Checking server version...");
+        if (getVersion() <= 12) {
+            System.out.println("## FATAL ERROR");
+            System.out.println("##");
+            System.out.println("## This server version is unsupported by HelpTickets");
+            System.out.println("## There will be a Legacy release of this plugin shortly.");
+            System.out.println("## ");
+            System.out.println("## Download link to legacy:");
+            System.out.println("## <LEGACY IS NOT OUT YET. CHECK ANOTHER TIME>");
+            System.out.println("## ");
+            System.out.println("## FATAL ERROR END");
+            this.getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
         System.out.println("[HT] Fetching commands...");
         commands();
         System.out.println("[HT] Registering listeners...");
