@@ -5,6 +5,28 @@ version: 1.0
 main: com.Ankoki.helptickets.main.HelpTickets
 prefix: "HT"
 api-version: 1.16
+permissions:
+  helptickets.create:
+    default: true
+    description: Player's can create tickets
+  helptickets.revoke:
+    default: true
+    description: Player's can revoke tickets
+  helptickets.open:
+    default: op
+    description: Open's the GUI to view tickets
+  helptickets.clear:
+    default: op
+    description: Clear's all open tickets
+  helptickets.solve:
+    default: op
+    description: Solve's tickets
+  helptickets.delete:
+    default: op
+    description: Delete's tickets
+  helptickets.prioritise:
+    default: op
+    description: Change the priority for tickets
 commands:
   helptickets:
     usage: /ht

@@ -38,7 +38,7 @@ public class TicketCMD implements CommandExecutor {
 
         if (args.length == 2 && args[0].equalsIgnoreCase("open") && args[1].equalsIgnoreCase("text")) {
 
-            if (p.hasPermission("helptickets.open") || p.hasPermission("helptickets.*") || p.hasPermission("helptickets.admin")) {
+            if (p.hasPermission("helptickets.open") || p.hasPermission("helptickets.*")) {
                 p.sendMessage(Utils.cC("&8[&2H&aT&8] &cWARNING, this list MAY be very long:"));
             }
             int i = 1;
@@ -57,7 +57,17 @@ public class TicketCMD implements CommandExecutor {
         }
 
         if (args.length > 1 && args[0].equalsIgnoreCase("create")) {
-            tickets.add(new Ticket(p.getName(), args, false));
+            String reason = "";
+            int i = 0;
+            for (String str : args) {
+                if (i == 0) {
+                    reason = "";
+                } else {
+                    reason += " " + str;
+                }
+                i++;
+            }
+            tickets.add(new Ticket(p.getName(), reason, false));
             p.sendMessage(Utils.cC(Lang.PREFIX + " " + Lang.CMD_CREATE_MESSAGE));
             return true;
         }

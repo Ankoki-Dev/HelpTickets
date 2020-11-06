@@ -20,6 +20,11 @@ public class Lang {
     public static String CMD_CLEAR_MESSAGE;
     public static String CMD_NOTICKETS_MESSAGE;
     public static String CMD_NOPERM_MESSAGE;
+    public static String CLICK_NOPERM_MESSAGE;
+    public static String CLICK_SOLVETICKET_MESSAGE;
+    public static String CLICK_OPENTICKET_MESSAGE;
+    public static String CLICK_REMOVETICKET_MESSAGE;
+    public static String CLICK_UPDATEDPRIORITY_MESSAGE;
     public static String CMD_INVALID_USAGE_MESSAGE;
     public static String CMD_INVALID_USAGE_MESSAGE_ADMIN;
     public static List<String> CMD_HELP_MESSAGE = new ArrayList<String>();
@@ -80,8 +85,13 @@ public class Lang {
         CMD_CLEAR_MESSAGE = Utils.cC(lang.getString("CMD_CLEAR_MESSAGE"));
         CMD_NOPERM_MESSAGE = Utils.cC(lang.getString("CMD_NOPERM_MESSAGE"));
         CMD_NOTICKETS_MESSAGE = Utils.cC(lang.getString("CMD_NOTICKETS_MESSAGE"));
+        CLICK_NOPERM_MESSAGE = Utils.cC(lang.getString("CLICK_NOPERM_MESSAGE"));
+        CLICK_SOLVETICKET_MESSAGE = Utils.cC(lang.getString("CLICK_SOLVETICKET_MESSAGE"));
+        CLICK_OPENTICKET_MESSAGE = Utils.cC(lang.getString("CLICK_OPENTICKET_MESSAGE"));
+        CLICK_REMOVETICKET_MESSAGE = Utils.cC(lang.getString("CLICK_REMOVETICKET_MESSAGE"));
+        CLICK_UPDATEDPRIORITY_MESSAGE= Utils.cC(lang.getString("CLICK_UPDATEDPRIORITY_MESSAGE"));
         CMD_INVALID_USAGE_MESSAGE = Utils.cC(lang.getString("CMD_INVALID_USAGE_MESSAGE"));
         CMD_INVALID_USAGE_MESSAGE_ADMIN = Utils.cC(lang.getString("CMD_INVALID_USAGE_MESSAGE_ADMIN"));
-        CMD_HELP_MESSAGE = lang.getStringList("CMD_HELP_MESSAGE");
+        CMD_HELP_MESSAGE = Utils.cCList(lang.getStringList("CMD_HELP_MESSAGE"));
     }
 }

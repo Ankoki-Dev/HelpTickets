@@ -3,13 +3,19 @@ package com.Ankoki.helptickets.main;
 import com.Ankoki.helptickets.commands.TicketCMD;
 import com.Ankoki.helptickets.listeners.InventoryClickE;
 import com.Ankoki.helptickets.utils.Lang;
+import com.Ankoki.helptickets.utils.Ticket;
 import com.Ankoki.helptickets.utils.Version;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.HashMap;
+import java.util.UUID;
+
 
 @SuppressWarnings({"unused", "redundant"})
 public class HelpTickets extends JavaPlugin {
+
+    public static HashMap<UUID, Ticket> ticketIDs = new HashMap<UUID, Ticket>();
 
     private static HelpTickets plugin;
 

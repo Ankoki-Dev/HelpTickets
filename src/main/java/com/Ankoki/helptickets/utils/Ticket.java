@@ -1,20 +1,26 @@
 package com.Ankoki.helptickets.utils;
 
+import com.Ankoki.helptickets.main.HelpTickets;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+
+import java.util.UUID;
 
 public class Ticket {
 
     String reporterName;
-    String[] helpReason;
+    String helpReason;
     boolean ticketSolved;
     Priority ticketPriority;
+    UUID ticketID;
 
-    public Ticket(String playerName, String[] reasonOfReport, boolean ifTicketSolved) {
+    public Ticket(String playerName, String reasonOfReport, boolean ifTicketSolved) {
         this.reporterName = playerName;
         this.helpReason = reasonOfReport;
         this.ticketSolved = ifTicketSolved;
         this.ticketPriority = Priority.UNDETERMINED;
+        this.ticketID = UUID.randomUUID();
+        HelpTickets.ticketIDs.put(ticketID, this);
     }
 
     public String getName() {
@@ -22,17 +28,7 @@ public class Ticket {
     }
 
     public String getReason() {
-        String str = "";
-        int i = 0;
-        for (String s : helpReason) {
-            if (i == 0) {
-                str = "";
-            } else {
-                str += " " + s;
-            }
-            i++;
-        }
-        return str;
+        return helpReason;
     }
 
     public boolean isSolved() {
@@ -61,5 +57,9 @@ public class Ticket {
 
     public Priority getPriority() {
         return ticketPriority;
+    }
+
+    public UUID getTicketID() {
+        return ticketID;
     }
 }
