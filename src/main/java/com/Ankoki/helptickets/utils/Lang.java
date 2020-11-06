@@ -82,6 +82,6 @@ public class Lang {
         CMD_NOTICKETS_MESSAGE = Utils.cC(lang.getString("CMD_NOTICKETS_MESSAGE"));
         CMD_INVALID_USAGE_MESSAGE = Utils.cC(lang.getString("CMD_INVALID_USAGE_MESSAGE"));
         CMD_INVALID_USAGE_MESSAGE_ADMIN = Utils.cC(lang.getString("CMD_INVALID_USAGE_MESSAGE_ADMIN"));
-        CMD_HELP_MESSAGE = lang.getStringList("cmd_help_message");
+        CMD_HELP_MESSAGE = lang.getStringList("CMD_HELP_MESSAGE");
     }
 }

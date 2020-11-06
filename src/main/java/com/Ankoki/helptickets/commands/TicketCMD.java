@@ -15,7 +15,6 @@ import java.util.List;
 public class TicketCMD implements CommandExecutor {
 
     public static List<Ticket> tickets = new ArrayList<Ticket>();
-    TicketInventory ti = new TicketInventory();
 
 
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
@@ -65,7 +64,7 @@ public class TicketCMD implements CommandExecutor {
 
         if (args.length == 1 && args[0].equals("open")) {
             if (p.hasPermission("helptickets.open") || p.hasPermission("helptickets.*") || p.hasPermission("helptickets.admin")) {
-                ti.openInventory(p);
+                TicketInventory.openInventory(p);
             }
             return true;
         }

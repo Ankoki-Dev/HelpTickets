@@ -20,6 +20,31 @@ public class Utils {
         return newList;
     }
 
+    public static List<String> readableLore(String lore) {
+        String[] splitLore;
+        splitLore = lore.split(" ");
+        List<String> readLore = new ArrayList<String>();
+        int i = 0;
+        readLore.add(" ");
+        String newline = Utils.cC("&aReason:&7");
+        for (String s : splitLore) {
+            i++;
+            if (i != 5) {
+                newline += s + " ";
+            }
+            if (i == 5) {
+                newline += s;
+                readLore.add(ChatColor.translateAlternateColorCodes('&', "&7") + newline);
+                newline = "";
+                i = 0;
+            }
+        }
+        if (newline != "") {
+            readLore.add(ChatColor.translateAlternateColorCodes('&', "&7") + newline);
+        }
+        return readLore;
+    }
+
     public static void formattedTicket(Player p, Ticket t, int i, boolean isLast) {
         p.sendMessage(Utils.cC("&a*********************&2HelpTickets&a*********************"));
         p.sendMessage(Utils.cC("&cTicket " + i + "&c:"));

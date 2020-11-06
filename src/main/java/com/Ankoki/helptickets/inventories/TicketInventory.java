@@ -11,17 +11,15 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class TicketInventory {
 
-    public ItemStack limeGlass;
-    public ItemStack redGlass;
-    public Inventory ticketInv = Bukkit.createInventory(null, 54, Utils.cC("&2Help&aTickets"));
+    public static ItemStack limeGlass;
+    public static ItemStack redGlass;
+    public static Inventory ticketInv = Bukkit.createInventory(null, 54, Utils.cC("&2Help&aTickets"));
 
-    public void openInventory(Player p) {
+    public static void openInventory(Player p) {
         try {
             formatTickets();
             p.openInventory(ticketInv);
@@ -30,7 +28,7 @@ public class TicketInventory {
         }
     }
 
-    private void formatTickets() {
+    private static void formatTickets() {
         if (TicketCMD.tickets.size() == 0) {
             throw new NullPointerException();
         } else if (TicketCMD.tickets.size() > 54) {
@@ -42,34 +40,27 @@ public class TicketInventory {
         int i = 0;
         for (Ticket t : TicketCMD.tickets) {
             if (t.isSolved()) {
-                ticketInv.setItem(i, guiITEM(limeGlass, t.getName(), t.getReason()));
+                ticketInv.setItem(i, guiITEM(limeGlass, t.getName(), t.getReason(), t));
             } else {
-                ticketInv.setItem(i, guiITEM(redGlass, t.getName(), t.getReason()));
+                ticketInv.setItem(i, guiITEM(redGlass, t.getName(), t.getReason(), t));
             }
             i++;
         }
     }
 
-    protected ItemStack guiITEM(ItemStack item, String displayName, String... lore) {
+    protected static ItemStack guiITEM(ItemStack item, String displayName, String lore, Ticket t) {
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(Utils.cC(displayName));
-        List<String> newLore = new ArrayList<String>();
-        int i = 1;
-        String line = "";
-        for (String s : Arrays.asList(lore)) {
-            if (i == 5) {
-                newLore.add(line);
-                Bukkit.broadcastMessage("newLore.toString() = " + newLore.toString());
-                line = "";
-                i = 0;
-            } else {
-                line += " " + s;
-                Bukkit.broadcastMessage("line = " + line);
-                i++;
-            }
-        }
-        newLore.add(line);
-        Bukkit.broadcastMessage("newLore.toString() = " + newLore.toString());
+        meta.setDisplayName(Utils.cC("&c" + displayName));
+        List<String> newLore = Utils.readableLore(lore);
+        newLore.add(" ");
+        newLore.add(Utils.cC("&aSolved: " + t.getSolvedYN()));
+        newLore.add(" ");
+        newLore.add(Utils.cC("&aReporter Online: &7" + t.reporterOnline()));
+        newLore.add(" ");
+        newLore.add(Utils.cC("&aPriority: &7" + t.getPriority().toString()));
+        newLore.add(Utils.cC("&9Left click to solve this ticket."));
+        newLore.add(Utils.cC("&9MMB to delete this ticket."));
+        newLore.add(Utils.cC("&9Right click to up the priority."));
         meta.setLore(Utils.cCList(newLore));
         item.setItemMeta(meta);
         return item;
