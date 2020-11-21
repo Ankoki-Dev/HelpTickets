@@ -13,13 +13,15 @@ public class Ticket {
     boolean ticketSolved;
     Priority ticketPriority;
     UUID ticketID;
+    UUID playerID;
 
-    public Ticket(String playerName, String reasonOfReport, boolean ifTicketSolved) {
+    public Ticket(String playerName, UUID playerUUID, String reasonOfReport, boolean ifTicketSolved) {
         this.reporterName = playerName;
         this.helpReason = reasonOfReport;
         this.ticketSolved = ifTicketSolved;
         this.ticketPriority = Priority.UNDETERMINED;
         this.ticketID = UUID.randomUUID();
+        this.playerID = playerUUID;
         HelpTickets.ticketIDs.put(ticketID, this);
     }
 
@@ -43,12 +45,16 @@ public class Ticket {
         ticketSolved = bool;
     }
 
+    public UUID getPlayerID() {
+        return playerID;
+    }
+
     public boolean reporterOnline() {
         return Bukkit.getPlayer(reporterName) != null;
     }
 
     public Player getReporter() {
-        return Bukkit.getPlayer(reporterName);
+        return Bukkit.getPlayer(reporterName) == null ? (Player) Bukkit.getOfflinePlayer(reporterName) : Bukkit.getPlayer(reporterName);
     }
 
     public void setPriority(Priority priority) {

@@ -1,6 +1,7 @@
-package com.Ankoki.helptickets.utils;
+package com.Ankoki.helptickets.files;
 
 import com.Ankoki.helptickets.main.HelpTickets;
+import com.Ankoki.helptickets.utils.Utils;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -15,11 +16,16 @@ public class Lang {
     //ty steel for letting me yoink codes from BN<3333 and shane for writing the base of that<3333
 
     public static String PREFIX;
+    public static String CREATE_CANCELLED;
+    public static String REVOKE_CANCELLED;
+    public static String TICKET_DELETE_CANCELLED;
     public static String CMD_CREATE_MESSAGE;
     public static String CMD_REVOKE_MESSAGE;
     public static String CMD_CLEAR_MESSAGE;
+    public static String CMD_NOTICKET_MESSAGE;
     public static String CMD_NOTICKETS_MESSAGE;
     public static String CMD_NOPERM_MESSAGE;
+    public static String CMD_MAXTICKETS_MESSAGE;
     public static String CLICK_NOPERM_MESSAGE;
     public static String CLICK_SOLVETICKET_MESSAGE;
     public static String CLICK_OPENTICKET_MESSAGE;
@@ -79,19 +85,24 @@ public class Lang {
     }
 
     private void loadFile() {
-        PREFIX = Utils.cC(lang.getString("PREFIX"));
-        CMD_CREATE_MESSAGE = Utils.cC(lang.getString("CMD_CREATE_MESSAGE"));
-        CMD_REVOKE_MESSAGE = Utils.cC(lang.getString("CMD_REVOKE_MESSAGE"));
-        CMD_CLEAR_MESSAGE = Utils.cC(lang.getString("CMD_CLEAR_MESSAGE"));
-        CMD_NOPERM_MESSAGE = Utils.cC(lang.getString("CMD_NOPERM_MESSAGE"));
-        CMD_NOTICKETS_MESSAGE = Utils.cC(lang.getString("CMD_NOTICKETS_MESSAGE"));
-        CLICK_NOPERM_MESSAGE = Utils.cC(lang.getString("CLICK_NOPERM_MESSAGE"));
-        CLICK_SOLVETICKET_MESSAGE = Utils.cC(lang.getString("CLICK_SOLVETICKET_MESSAGE"));
-        CLICK_OPENTICKET_MESSAGE = Utils.cC(lang.getString("CLICK_OPENTICKET_MESSAGE"));
-        CLICK_REMOVETICKET_MESSAGE = Utils.cC(lang.getString("CLICK_REMOVETICKET_MESSAGE"));
-        CLICK_UPDATEDPRIORITY_MESSAGE= Utils.cC(lang.getString("CLICK_UPDATEDPRIORITY_MESSAGE"));
-        CMD_INVALID_USAGE_MESSAGE = Utils.cC(lang.getString("CMD_INVALID_USAGE_MESSAGE"));
-        CMD_INVALID_USAGE_MESSAGE_ADMIN = Utils.cC(lang.getString("CMD_INVALID_USAGE_MESSAGE_ADMIN"));
-        CMD_HELP_MESSAGE = Utils.cCList(lang.getStringList("CMD_HELP_MESSAGE"));
+        PREFIX = Utils.cC(lang.getString("prefix") + " ");
+        CREATE_CANCELLED = Utils.cC(lang.getString("create-cancelled"));
+        REVOKE_CANCELLED = Utils.cC(lang.getString("revoke-cancelled"));
+        TICKET_DELETE_CANCELLED = Utils.cC(lang.getString("delete-ticket-cancelled"));
+        CMD_CREATE_MESSAGE = Utils.cC(lang.getString("cmd-create-message"));
+        CMD_REVOKE_MESSAGE = Utils.cC(lang.getString("cmd-revoke-message"));
+        CMD_CLEAR_MESSAGE = Utils.cC(lang.getString("cmd-clear-message"));
+        CMD_NOPERM_MESSAGE = Utils.cC(lang.getString("cmd-noperm-message"));
+        CMD_NOTICKET_MESSAGE = Utils.cC(lang.getString("cmd-noticket-message"));
+        CMD_NOTICKETS_MESSAGE = Utils.cC(lang.getString("cmd-notickets-message"));
+        CMD_MAXTICKETS_MESSAGE = Utils.cC(lang.getString("cmd-maxtickets-message"));
+        CLICK_NOPERM_MESSAGE = Utils.cC(lang.getString("click-noperm-message"));
+        CLICK_SOLVETICKET_MESSAGE = Utils.cC(lang.getString("click-solveticket-message"));
+        CLICK_OPENTICKET_MESSAGE = Utils.cC(lang.getString("click-openticket-message"));
+        CLICK_REMOVETICKET_MESSAGE = Utils.cC(lang.getString("click-removeticket-message"));
+        CLICK_UPDATEDPRIORITY_MESSAGE= Utils.cC(lang.getString("click-updatedpriority-message"));
+        CMD_INVALID_USAGE_MESSAGE = Utils.cC(lang.getString("cmd-invalid-usage-message"));
+        CMD_INVALID_USAGE_MESSAGE_ADMIN = Utils.cC(lang.getString("cmd-invalid-usage-message-admin"));
+        CMD_HELP_MESSAGE = Utils.cCList(lang.getStringList("cmd-help-message"));
     }
 }

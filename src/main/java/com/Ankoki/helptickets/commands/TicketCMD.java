@@ -1,20 +1,27 @@
 package com.Ankoki.helptickets.commands;
 
+import com.Ankoki.helptickets.api.events.TicketCreateEvent;
+import com.Ankoki.helptickets.files.Config;
 import com.Ankoki.helptickets.inventories.TicketInventory;
-import com.Ankoki.helptickets.utils.Lang;
+import com.Ankoki.helptickets.main.HelpTickets;
+import com.Ankoki.helptickets.files.Lang;
 import com.Ankoki.helptickets.utils.Ticket;
 import com.Ankoki.helptickets.utils.Utils;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.UUID;
 
 public class TicketCMD implements CommandExecutor {
 
     public static List<Ticket> tickets = new ArrayList<Ticket>();
+    public static HashMap<UUID, Integer> playersTicket = new HashMap<UUID, Integer>();
 
 
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
@@ -25,7 +32,7 @@ public class TicketCMD implements CommandExecutor {
         }
         Player p = (Player) sender;
         if (!(p.hasPermission("helptickets.use"))) {
-            p.sendMessage(Lang.PREFIX + " " + Lang.CMD_NOPERM_MESSAGE);
+            p.sendMessage(Lang.PREFIX + Lang.CMD_NOPERM_MESSAGE);
             return true;
         }
 
@@ -36,49 +43,61 @@ public class TicketCMD implements CommandExecutor {
             return true;
         }
 
-        if (args.length == 2 && args[0].equalsIgnoreCase("open") && args[1].equalsIgnoreCase("text")) {
-
-            if (p.hasPermission("helptickets.open") || p.hasPermission("helptickets.*")) {
-                p.sendMessage(Utils.cC("&8[&2H&aT&8] &cWARNING, this list MAY be very long:"));
+        if (args.length == 1) {
+            if (args[0].equalsIgnoreCase("clear")) {
+                tickets.clear();
+                HelpTickets.ticketIDs.clear();
+                p.sendMessage(Lang.PREFIX + Lang.CMD_CLEAR_MESSAGE);
+                return true;
             }
-            int i = 1;
-            for (Ticket t: tickets) {
-                Utils.formattedTicket(p, t, i, (i >= tickets.size()));
-                i++;
-            }
-            p.sendMessage(Utils.cC("&8[&2H&aT&8] &cThis list was &7" + (i = i - 1) + " &cTickets long."));
-            return true;
-        }
 
-        if (args.length == 1 && args[0].equalsIgnoreCase("clear")) {
-            tickets.clear();
-            p.sendMessage(Lang.CMD_CLEAR_MESSAGE);
-            return true;
-        }
-
-        if (args.length > 1 && args[0].equalsIgnoreCase("create")) {
-            String reason = "";
-            int i = 0;
-            for (String str : args) {
-                if (i == 0) {
-                    reason = "";
+            if (args[0].equalsIgnoreCase("open")) {
+                if (p.hasPermission("helptickets.open") || p.hasPermission("helptickets.*") || p.hasPermission("helptickets.admin")) {
+                    TicketInventory.openInventory(p);
                 } else {
-                    reason += " " + str;
+                    p.sendMessage(Lang.PREFIX + Lang.CMD_NOPERM_MESSAGE);
                 }
-                i++;
+                return true;
             }
-            tickets.add(new Ticket(p.getName(), reason, false));
-            p.sendMessage(Utils.cC(Lang.PREFIX + " " + Lang.CMD_CREATE_MESSAGE));
-            return true;
-        }
 
-        if (args.length == 1 && args[0].equals("open")) {
-            if (p.hasPermission("helptickets.open") || p.hasPermission("helptickets.*") || p.hasPermission("helptickets.admin")) {
-                TicketInventory.openInventory(p);
+            if (args[0].equalsIgnoreCase("revoke")) {
+
             }
-            return true;
+        } else {
+            if (args[0].equalsIgnoreCase("create")) {
+                if (!(playersTicket.get(p.getUniqueId()) == null) && playersTicket.get(p.getUniqueId()) >= Config.MAX_TICKETS) {
+                    p.sendMessage(Lang.PREFIX + Lang.CMD_MAXTICKETS_MESSAGE);
+                    return true;
+                }
+                String reason = "";
+                int i = 0;
+                for (String str : args) {
+                    if (i == 0) {
+                        reason = "";
+                    } else {
+                        reason += " " + str;
+                    }
+                    i++;
+                }
+                Ticket ticket = new Ticket(p.getName(), p.getUniqueId(), reason, false);
+                TicketCreateEvent event = new TicketCreateEvent(p, ticket);
+                Bukkit.getPluginManager().callEvent(event);
+                if (event.isCancelled()) {
+                    p.sendMessage(Lang.PREFIX + Lang.CREATE_CANCELLED);
+                    return true;
+                }
+                int num = playersTicket.get(p.getUniqueId()) == null ? 0 : playersTicket.get(p.getUniqueId());
+                num++;
+                tickets.add(ticket);
+                if (playersTicket.get(p.getUniqueId()) != null) {
+                    playersTicket.remove(p.getUniqueId());
+                }
+                playersTicket.put(p.getUniqueId(), num);
+                p.sendMessage(Utils.cC(Lang.PREFIX + Lang.CMD_CREATE_MESSAGE));
+                return true;
+            }
         }
-        p.sendMessage(Lang.CMD_INVALID_USAGE_MESSAGE.replace("%u", "tickets (open|revoke) [reason]"));
+        p.sendMessage(Lang.PREFIX + Lang.CMD_INVALID_USAGE_MESSAGE.replace("%u", "/tickets (create|revoke) [<ticket reason>]"));
         return true;
     }
 }

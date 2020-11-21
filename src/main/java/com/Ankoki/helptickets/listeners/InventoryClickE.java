@@ -1,13 +1,15 @@
 package com.Ankoki.helptickets.listeners;
 
+import com.Ankoki.helptickets.api.events.TicketDeleteEvent;
 import com.Ankoki.helptickets.commands.TicketCMD;
 import com.Ankoki.helptickets.inventories.TicketInventory;
 import com.Ankoki.helptickets.main.HelpTickets;
-import com.Ankoki.helptickets.utils.Lang;
+import com.Ankoki.helptickets.files.Lang;
 import com.Ankoki.helptickets.utils.Priority;
 import com.Ankoki.helptickets.utils.Ticket;
 import com.Ankoki.helptickets.utils.Utils;
 import de.tr7zw.changeme.nbtapi.NBTItem;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -40,31 +42,38 @@ public class InventoryClickE implements Listener {
 
         if (e.getClick() == ClickType.LEFT) {
             if (!p.hasPermission("helptickets.solve")) {
-                p.sendMessage(Utils.cC(Lang.PREFIX + " " + Lang.CLICK_NOPERM_MESSAGE));
+                p.sendMessage(Utils.cC(Lang.PREFIX + Lang.CLICK_NOPERM_MESSAGE));
                 return;
             }
             ticket.setSolved(!ticket.isSolved());
             if (ticket.isSolved()) {
-                p.sendMessage(Utils.cC(Lang.PREFIX + " " + Lang.CLICK_SOLVETICKET_MESSAGE));
+                p.sendMessage(Utils.cC(Lang.PREFIX + Lang.CLICK_SOLVETICKET_MESSAGE));
             } else {
-                p.sendMessage(Utils.cC(Lang.PREFIX + " " + Lang.CLICK_OPENTICKET_MESSAGE));
+                p.sendMessage(Utils.cC(Lang.PREFIX + Lang.CLICK_OPENTICKET_MESSAGE));
             }
         }
 
         else if (e.getClick() == ClickType.MIDDLE) {
             if (!p.hasPermission("helptickets.delete")) {
-                p.sendMessage(Utils.cC(Lang.PREFIX + " " + Lang.CMD_NOPERM_MESSAGE));
+                p.sendMessage(Utils.cC(Lang.PREFIX + Lang.CMD_NOPERM_MESSAGE));
+                return;
+            }
+            TicketDeleteEvent event = new TicketDeleteEvent(p, ticket);
+            Bukkit.getPluginManager().callEvent(event);
+            if (event.isCancelled()) {
+                p.sendMessage(Lang.PREFIX + Lang.TICKET_DELETE_CANCELLED);
                 return;
             }
             HelpTickets.ticketIDs.remove(ticket.getTicketID());
             TicketCMD.tickets.remove(ticket);
+            TicketCMD.playersTicket.remove(ticket.getPlayerID());
             ticket = null;
-            p.sendMessage(Utils.cC(Lang.PREFIX + " " + Lang.CLICK_REMOVETICKET_MESSAGE));
+            p.sendMessage(Utils.cC(Lang.PREFIX + Lang.CLICK_REMOVETICKET_MESSAGE));
         }
 
         else if (e.getClick() == ClickType.RIGHT) {
             if (!p.hasPermission("helptickets.prioritise")) {
-                p.sendMessage(Utils.cC(Lang.PREFIX + " " + Lang.CLICK_NOPERM_MESSAGE));
+                p.sendMessage(Utils.cC(Lang.PREFIX + Lang.CLICK_NOPERM_MESSAGE));
                 return;
             }
             switch (ticket.getPriority()) {
@@ -84,7 +93,7 @@ public class InventoryClickE implements Listener {
                     ticket.setPriority(Priority.UNDETERMINED);
                     break;
             }
-            p.sendMessage(Utils.cC(Lang.PREFIX + " " + Lang.CLICK_UPDATEDPRIORITY_MESSAGE));
+            p.sendMessage(Utils.cC(Lang.PREFIX + Lang.CLICK_UPDATEDPRIORITY_MESSAGE));
         }
         TicketInventory.openInventory(p);
     }

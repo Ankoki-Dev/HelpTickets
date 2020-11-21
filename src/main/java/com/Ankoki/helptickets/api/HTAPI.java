@@ -11,7 +11,7 @@ public class HTAPI {
         return HelpTickets.ticketIDs.get(uuid);
     }
 
-    public Ticket createTicket(String playerName, String reasonOfReport, boolean isTicketSolved) {
-        return new Ticket(playerName, reasonOfReport, isTicketSolved);
+    public Ticket createTicket(String playerName, UUID playerUUID, String reasonOfReport, boolean isTicketSolved) {
+        return new Ticket(playerName, playerUUID, reasonOfReport, isTicketSolved);
     }
 }

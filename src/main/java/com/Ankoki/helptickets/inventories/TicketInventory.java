@@ -1,7 +1,7 @@
 package com.Ankoki.helptickets.inventories;
 
 import com.Ankoki.helptickets.commands.TicketCMD;
-import com.Ankoki.helptickets.utils.Lang;
+import com.Ankoki.helptickets.files.Lang;
 import com.Ankoki.helptickets.utils.Ticket;
 import com.Ankoki.helptickets.utils.Utils;
 import com.google.common.collect.Lists;
@@ -12,6 +12,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class TicketInventory {
         try {
             formatTickets(ticketInv);
         } catch (NullPointerException e) {
-            p.sendMessage(Utils.cC(Lang.PREFIX + " " + Lang.CMD_NOTICKETS_MESSAGE));
+            p.sendMessage(Utils.cC(Lang.PREFIX + Lang.CMD_NOTICKETS_MESSAGE));
         }
             p.openInventory(ticketInv);
     }
@@ -55,7 +56,7 @@ public class TicketInventory {
         }
     }
 
-    protected static ItemStack guiITEM(ItemStack item, String displayName, String lore, Ticket ticket) {
+    protected static ItemStack guiITEM(ItemStack item, String displayName, String lore, @Nullable Ticket ticket) {
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(Utils.cC("&c" + displayName));
         List<String> newLore = Utils.readableLore(lore);
