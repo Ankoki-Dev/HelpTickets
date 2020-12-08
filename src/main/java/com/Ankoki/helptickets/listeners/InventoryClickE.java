@@ -16,10 +16,17 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class InventoryClickE implements Listener {
+
+    @EventHandler
+    public void invClose(InventoryCloseEvent e) {
+        if (e.getInventory() != TicketInventory.ticketInv) return;
+        e.getInventory().clear();
+    }
 
     @EventHandler
     public void invClick(InventoryClickEvent e) {
@@ -33,12 +40,13 @@ public class InventoryClickE implements Listener {
         NBTItem clickedNBT = new NBTItem(clickedItem);
 
         if (clickedItem.getType() == Material.PAPER) {
+            NBTItem nextPage = new NBTItem(clickedItem);
+            int pageNumber = nextPage.getInteger("NextPage");
+            TicketInventory.openInventory(p, pageNumber + 1);
             return;
         }
 
         Ticket ticket = HelpTickets.ticketIDs.get(clickedNBT.getUUID("TicketID"));
-
-
 
         if (e.getClick() == ClickType.LEFT) {
             if (!p.hasPermission("helptickets.solve")) {
@@ -95,7 +103,7 @@ public class InventoryClickE implements Listener {
             }
             p.sendMessage(Utils.cC(Lang.PREFIX + Lang.CLICK_UPDATEDPRIORITY_MESSAGE));
         }
-        TicketInventory.openInventory(p);
+        TicketInventory.openInventory(p, 0);
     }
 
     @EventHandler

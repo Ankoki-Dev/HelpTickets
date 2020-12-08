@@ -20,7 +20,6 @@ public class Lang {
     public static String REVOKE_CANCELLED;
     public static String TICKET_DELETE_CANCELLED;
     public static String CMD_CREATE_MESSAGE;
-    public static String CMD_REVOKE_MESSAGE;
     public static String CMD_CLEAR_MESSAGE;
     public static String CMD_NOTICKET_MESSAGE;
     public static String CMD_NOTICKETS_MESSAGE;
@@ -90,7 +89,6 @@ public class Lang {
         REVOKE_CANCELLED = Utils.cC(lang.getString("revoke-cancelled"));
         TICKET_DELETE_CANCELLED = Utils.cC(lang.getString("delete-ticket-cancelled"));
         CMD_CREATE_MESSAGE = Utils.cC(lang.getString("cmd-create-message"));
-        CMD_REVOKE_MESSAGE = Utils.cC(lang.getString("cmd-revoke-message"));
         CMD_CLEAR_MESSAGE = Utils.cC(lang.getString("cmd-clear-message"));
         CMD_NOPERM_MESSAGE = Utils.cC(lang.getString("cmd-noperm-message"));
         CMD_NOTICKET_MESSAGE = Utils.cC(lang.getString("cmd-noticket-message"));

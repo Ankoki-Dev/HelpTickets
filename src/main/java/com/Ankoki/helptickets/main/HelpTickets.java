@@ -30,8 +30,6 @@ public class HelpTickets extends JavaPlugin {
 
     private PluginManager pm;
 
-    
-    //Figure out why the logger logs "[HelpTickets] [HelpTickets] Shit" and why NoClassDefFoundError for NBTAPI
     @Override
     public void onEnable() {
         long start = System.currentTimeMillis();
@@ -56,9 +54,10 @@ public class HelpTickets extends JavaPlugin {
         }
         logger.send("Hooking into bStats...");
         try {
-            if (Class.forName("import org.bstats.bukkit.Metrics") != null) {
+            if (Class.forName("org.bstats.bukkit.Metrics") != null) {
                 int pluginId = 9467;
                 Metrics metrics = new Metrics(this, pluginId);
+                logger.send("bStats enabled. Thank you for helping!");
             }
         } catch (ClassNotFoundException e) {
             logger.send("bStats not found, integration disabled.");
@@ -103,8 +102,8 @@ public class HelpTickets extends JavaPlugin {
         } catch (NullPointerException ex) {
             logger.err("## We couldn't find any version linked to your minecraft");
             logger.err("## You are on a version BELOW 1.8, or an unsupported version.");
-            logger.err("## We are going to disable for now, if you are on a newer version,");
-            logger.err("## let me know at Ankoki#0001 on discord.");
+            logger.err("## We are going to disable for now, if you are on a newer version");
+            logger.err("## that isn't supported, let me know at Ankoki#0001 on discord.");
             pm.disablePlugin(plugin);
         }
         return 0;

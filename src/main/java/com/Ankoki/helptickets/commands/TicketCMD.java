@@ -53,22 +53,18 @@ public class TicketCMD implements CommandExecutor {
 
             if (args[0].equalsIgnoreCase("open")) {
                 if (p.hasPermission("helptickets.open") || p.hasPermission("helptickets.*") || p.hasPermission("helptickets.admin")) {
-                    TicketInventory.openInventory(p);
+                    TicketInventory.openInventory(p, 0);
                 } else {
                     p.sendMessage(Lang.PREFIX + Lang.CMD_NOPERM_MESSAGE);
                 }
                 return true;
             }
-
-            if (args[0].equalsIgnoreCase("revoke")) {
-
-            }
         } else {
             if (args[0].equalsIgnoreCase("create")) {
-                if (!(playersTicket.get(p.getUniqueId()) == null) && playersTicket.get(p.getUniqueId()) >= Config.MAX_TICKETS) {
+                /*if (!(playersTicket.get(p.getUniqueId()) == null) && playersTicket.get(p.getUniqueId()) >= Config.MAX_TICKETS) {
                     p.sendMessage(Lang.PREFIX + Lang.CMD_MAXTICKETS_MESSAGE);
                     return true;
-                }
+                }*/
                 String reason = "";
                 int i = 0;
                 for (String str : args) {
@@ -97,7 +93,7 @@ public class TicketCMD implements CommandExecutor {
                 return true;
             }
         }
-        p.sendMessage(Lang.PREFIX + Lang.CMD_INVALID_USAGE_MESSAGE.replace("%u", "/tickets (create|revoke) [<ticket reason>]"));
+        p.sendMessage(Lang.PREFIX + Lang.CMD_INVALID_USAGE_MESSAGE.replace("%u", "tickets (create|open|clear) [<ticket reason>]"));
         return true;
     }
 }

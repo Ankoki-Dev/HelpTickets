@@ -57,4 +57,8 @@ public class Utils {
         }
     }
 
+    public static String getUncolouredItemName(Ticket item) {
+        return item.getName();
+    }
+
 }

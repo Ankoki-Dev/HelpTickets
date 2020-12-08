@@ -19,39 +19,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bb83f25-ae75-4a36-be58-612ef4440892" name="Default Changelist" comment="GUI is properly working. Refer to ToDo to see what is needed:p">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/api/events/TicketCreateEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/api/events/TicketDeleteEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/files/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/api/HTAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/api/HTAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/commands/TicketCMD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/commands/TicketCMD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/files/Lang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/files/Lang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/inventories/TicketInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/inventories/TicketInventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/listeners/InventoryClickE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/listeners/InventoryClickE.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/main/HelpTickets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/main/HelpTickets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/misc/ToDo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Lang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/files/Lang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Ticket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Ankoki/helptickets/utils/Version.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lang.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/HelpTickets-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/HelpTickets-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/commands/TicketCMD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/commands/TicketCMD.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/inventories/TicketInventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/inventories/TicketInventory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/listeners/InventoryClickE.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/listeners/InventoryClickE.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/main/HelpTickets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/main/HelpTickets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/utils/Lang.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/utils/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/utils/Ticket.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Ankoki/helptickets/utils/Utils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lang.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +74,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.14257812" />
@@ -99,21 +90,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IdeaProjects\HelpTickets\src\main\resources" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -159,6 +135,17 @@
       <workItem from="1605920301642" duration="23000" />
       <workItem from="1605956963196" duration="1334000" />
       <workItem from="1605958357818" duration="5867000" />
+      <workItem from="1606073458622" duration="17000" />
+      <workItem from="1606097488503" duration="7000" />
+      <workItem from="1606145650519" duration="56000" />
+      <workItem from="1606238800604" duration="2423000" />
+      <workItem from="1606437024425" duration="27000" />
+      <workItem from="1606615405581" duration="1589000" />
+      <workItem from="1606678999527" duration="764000" />
+      <workItem from="1606702096439" duration="79000" />
+      <workItem from="1607283959330" duration="130000" />
+      <workItem from="1607428190798" duration="172000" />
+      <workItem from="1607428868684" duration="3961000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1603908946520</created>
@@ -250,34 +237,39 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603907849581" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1605964072732">
-      <screen x="-1920" y="5" width="1920" height="1040" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1607433708829">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604687438135" />
     <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.5.1920.1040@-1920.5.1920.1040" timestamp="1605964072732" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1605964072732">
-      <screen x="-1920" y="5" width="1920" height="1040" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607433708829" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1607433708828">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604687438135" />
     <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.5.1920.1040@-1920.5.1920.1040" timestamp="1605964072732" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1605964072732">
-      <screen x="-1920" y="5" width="1920" height="1040" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607433708828" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1607433708828">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604687438135" />
     <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.5.1920.1040@-1920.5.1920.1040" timestamp="1605964072732" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1605964072732">
-      <screen x="-1920" y="5" width="1920" height="1040" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607433708828" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1607433708828">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604687438135" />
     <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.5.1920.1040@-1920.5.1920.1040" timestamp="1605964072732" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607433708828" />
     <state x="-1380" y="255" key="IDE.errors.dialog" timestamp="1603748576874">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1380" y="255" key="IDE.errors.dialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603748576874" />
-    <state x="-1582" y="150" key="SettingsEditor" timestamp="1604621642317">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="338" y="150" key="SettingsEditor" timestamp="1607432224988">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1582" y="150" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604621642317" />
+    <state x="338" y="150" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607432224988" />
     <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604685350409">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -306,10 +298,11 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1260" y="265" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604109384389" />
-    <state x="-1304" y="240" key="run.anything.popup" timestamp="1603851709599">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1606239681705">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603851709599" />
+    <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606239681705" />
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604620548191">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
